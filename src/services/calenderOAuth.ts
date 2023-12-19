@@ -21,7 +21,7 @@ export const OauthCalender = google.calendar({
 })
 export const OauthDrive = google.drive({
   version: 'v3',
-  auth: oAuthConfig.api_key,
+  auth: oauth2Client,
 })
 oauth2Client.on('tokens', async (token) => {
   const configs = config.util.toObject()
@@ -35,8 +35,4 @@ oauth2Client.on('tokens', async (token) => {
   }
   console.log('token updated')
 })
-// async function getToken() {
-//   const token = await oauth2Client.getToken(oAuthConfig.redirectUrl)
-//   console.log(token)
-// }
 // getToken()

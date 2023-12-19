@@ -21,9 +21,9 @@ export const getEvent = customRouteFunction<unknown, { id: string }>((req, res) 
 export const getCalender = customRouteFunction((_req, res) => {
   return runService(async () => {
     // const calendarList = await OauthCalender.calendarList.list({ auth: oauth2Client })
-    const calendarList = await OauthDrive.files.list({
-      auth: oauth2Client,
-    })
+    const calendarList = await OauthDrive.files.list({})
+    // const token = await oauth2Client.getAccessToken()
+    // console.log(token)
     res.json(calendarList.data)
   })
 })
