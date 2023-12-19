@@ -9,6 +9,7 @@ export default function routes(app: Application) {
   app.use('/calender', calendarRoute)
   app.use('/google', oAuthRoute)
   app.use((req: Request, res: Response, next: NextFunction) => {
+    console.log(req.params)
     next(new createHttpError.NotFound())
   })
 }

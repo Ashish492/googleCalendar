@@ -11,6 +11,7 @@ export const redirect = customRouteFunction((req, res) =>
 )
 export const handleGoogle = customRouteFunction((_req, res) =>
   runService(async () => {
+    console.log(config.get<CalendarConfig>('calender').scopes)
     const url = oauth2Client.generateAuthUrl({
       access_type: 'offline',
       scope: config.get<CalendarConfig>('calender').scopes,

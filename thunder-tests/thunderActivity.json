@@ -8,9 +8,14 @@
         "method": "POST",
         "sortNum": 0,
         "created": "2023-08-06T05:16:33.795Z",
-        "modified": "2023-08-07T07:58:14.825Z",
+        "modified": "2023-08-07T11:37:39.726Z",
         "headers": [],
         "params": [],
+        "body": {
+            "type": "json",
+            "raw": "{\n  \"summary\":\"new calender1\",\n  \"description\":\"from api\"\n}",
+            "form": []
+        },
         "tests": []
     },
     {
@@ -36,14 +41,28 @@
         "method": "POST",
         "sortNum": 0,
         "created": "2023-08-06T05:16:51.381Z",
-        "modified": "2023-08-07T07:37:35.529Z",
+        "modified": "2023-08-07T11:44:37.030Z",
         "headers": [],
         "params": [],
         "body": {
             "type": "json",
-            "raw": "{\n  \"requestBody\":{\n  \"summary\": \"new Event2\",\n  \"description\": \"This is a sample event description.\",\n  \"start\": {\n       \"dateTime\": \"2023-08-07T19:45:00.000Z\",\n    \"timeZone\": \"Asia/Kathmandu\"\n  },\n  \"end\": {\n\"dateTime\": \"2023-08-07T21:45:00.000Z\",\n    \"timeZone\": \"Asia/Kathmandu\"\n  }\n}\n}",
+            "raw": "{\n  \"calendarId\":\"stdht3nlmc3rgbgf8ap3rlf95o@group.calendar.google.com\",\n  \"requestBody\":{\n  \"summary\": \"new Event2\",\n  \"description\": \"This is a sample event description.\",\n  \"start\": {\n       \"dateTime\": \"2023-08-07T19:45:00.000Z\",\n    \"timeZone\": \"Asia/Kathmandu\"\n  },\n  \"end\": {\n\"dateTime\": \"2023-08-07T21:45:00.000Z\",\n    \"timeZone\": \"Asia/Kathmandu\"\n  }\n}\n}",
             "form": []
         },
+        "tests": []
+    },
+    {
+        "_id": "fbee839b-e1ac-49eb-9426-3107053b9032",
+        "colId": "history",
+        "containerId": "",
+        "name": "getEvent",
+        "url": "http://localhost:5000/calender/event/stdht3nlmc3rgbgf8ap3rlf95o@group.calendar.google.com",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2023-08-06T05:16:51.381Z",
+        "modified": "2023-08-07T12:27:07.269Z",
+        "headers": [],
+        "params": [],
         "tests": []
     },
     {

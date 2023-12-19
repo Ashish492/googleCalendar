@@ -1,26 +1,30 @@
 import {} from '@types'
-import { customRouteFunction, logger, runService } from '@utils'
+import { customRouteFunction, runService } from '@utils'
 import calendar from '@services/calender'
 import { calendar_v3 } from 'googleapis'
-import { OauthCalender, oauth2Client } from '@services/calenderOAuth'
-export const getEvent = customRouteFunction((_req, res) => {
+import { OauthCalender, OauthDrive, oauth2Client } from '@services/calenderOAuth'
+import { CalenderInsertDto } from 'dto'
+export const getEvent = customRouteFunction<unknown, { id: string }>((req, res) => {
+  console.log(req.params, 'params')
   return runService(async () => {
-    const events = await calendar.events.list({
-      calendarId: 'ec8gmvf3ndpra041bkq2agonao@group.calendar.google.com',
-      timeMin: new Date().toISOString(),
+    const events = await OauthCalender.events.list({
+      auth: oauth2Client,
+      calendarId: req.params.id ?? 'primary',
       maxResults: 10,
       singleEvents: true,
       orderBy: 'startTime',
     })
-    res.json({ events: events.data.items })
+    console.error(events)
+    res.json({ events: events.data })
   })
 })
 export const getCalender = customRouteFunction((_req, res) => {
   return runService(async () => {
-    console.log('inside function')
-    const calendarList = await OauthCalender.calendarList.list({ auth: oauth2Client })
-    logger.info(calendarList, 'cl')
-    res.json({ item: calendarList.data.items })
+    // const calendarList = await OauthCalender.calendarList.list({ auth: oauth2Client })
+    const calendarList = await OauthDrive.files.list({
+      auth: oauth2Client,
+    })
+    res.json(calendarList.data)
   })
 })
 export const getCalenderById = customRouteFunction((_req, res) => {
@@ -34,24 +38,21 @@ export const getCalenderById = customRouteFunction((_req, res) => {
 export const insertEvent = customRouteFunction<calendar_v3.Params$Resource$Events$Insert>((req, res) =>
   runService(async () => {
     const event = await OauthCalender.events.insert({
-      calendarId: 'primary',
+      calendarId: req.body.calendarId ?? 'primary',
       auth: oauth2Client,
       ...req.body,
     })
-    res.json(event)
+    res.json(event.data)
   })
 )
-export const insertCalender = customRouteFunction<calendar_v3.Params$Resource$Calendars$Insert>((req, res) =>
+export const insertCalender = customRouteFunction<CalenderInsertDto>((req, res) =>
   runService(async () => {
-    const event = await OauthCalender.calendars.insert({
+    console.log(req.body)
+    const response = await OauthCalender.calendars.insert({
       auth: oauth2Client,
-      requestBody: {
-        summary: 'testing calender-new123',
-        description: 'new tested calender',
-        timeZone: 'Asia/Kathmandu', // Replace with your desired time zone
-      },
+      requestBody: req.body,
     })
-    res.json(event)
+    res.json(response.data)
   })
 )
 export const giveAccess = customRouteFunction<calendar_v3.Params$Resource$Calendars$Insert>((req, res) =>

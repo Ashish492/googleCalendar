@@ -24,8 +24,9 @@ module.exports = {
     },
   },
   rules: {
-    "import/named": "off",
-    "@typescript-eslint/no-explicit-any": "off",
+    'import/no-named-as-default': 'off',
+    'import/named': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
     'import/order': 'off',
     'no-use-before-define': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],

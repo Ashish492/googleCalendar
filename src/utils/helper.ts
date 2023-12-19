@@ -24,7 +24,6 @@ export const runService = async <T>(fn: (...args: any[]) => T, msg?: string): Pr
   try {
     return fn()
   } catch (error) {
-    console.log(error, 'Hashish')
     throw createHttpError(500, msg ?? 'internal server Error', { cause: error })
   }
 }

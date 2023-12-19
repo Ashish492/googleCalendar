@@ -16,9 +16,8 @@ app.use(helmet())
 app.use(cors())
 app.set('calenderConfig', path.resolve(__dirname, '../', config.get('calendarConfig')))
 // app.use(initializePassport())
-
 const errorHandler: ErrorRequestHandler = (err, req, res, _next) => {
-  console.log('called', err)
+  console.log(err, 'err')
   if (err instanceof ZodError) {
     res.status(400)
     return res.json(err.issues)

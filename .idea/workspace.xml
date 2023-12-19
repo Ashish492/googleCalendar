@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e5372f4-f87b-43f8-9083-ce93ec5c6438" name="Changes" comment="" />
+    <list default="true" id="7e5372f4-f87b-43f8-9083-ce93ec5c6438" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/GoogleCalenderController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/GoogleCalenderController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middlewares/PassportAuth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/PassportAuth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middlewares/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middlewares/validator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/validator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/calendar.route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/calendar.route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/calenderOAuth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/calenderOAuth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thunder-tests/thunderActivity.json" beforeDir="false" afterPath="$PROJECT_DIR$/thunder-tests/thunderActivity.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +29,9 @@
         <option value="TypeScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/services/calender.ts" root0="FORCE_HIGHLIGHTING" />
@@ -34,7 +50,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "js.linters.configure.manually.selectedtslint": "true",
-    "last_opened_file_path": "/home/jerry/My_home/Material/googleCalendar",
+    "last_opened_file_path": "/home/jerry/Assignment/palmmind/ChatbotDashboardFront",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -43,6 +59,11 @@
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "/snap/intellij-idea-ultimate/445/plugins/javascript-impl/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mongo"
+    ]
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -58,6 +79,11 @@
       <workItem from="1691058882679" duration="1808000" />
       <workItem from="1691292152975" duration="1389000" />
       <workItem from="1691373008060" duration="1079000" />
+      <workItem from="1691468239281" duration="621000" />
+      <workItem from="1691551654252" duration="558000" />
+      <workItem from="1691569426198" duration="1100000" />
+      <workItem from="1693145739865" duration="44000" />
+      <workItem from="1693145806163" duration="37000" />
     </task>
     <servers />
   </component>
