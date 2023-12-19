@@ -25,6 +25,7 @@ export const OauthDrive = google.drive({
 })
 oauth2Client.on('tokens', async (token) => {
   const configs = config.util.toObject()
+  configs.OAuth2.token.updatedDate = new Date().toString()
   if (token.access_token) {
     configs.OAuth2.token.access_token = token.access_token
     await writeFile(path.resolve(__dirname, '../../', config.get('configFile')), JSON.stringify(configs))
